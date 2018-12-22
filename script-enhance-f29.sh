@@ -37,9 +37,9 @@ usermod -a -G vboxusers $USUARIO
 #music players,codecs & video
 dnf config-manager --add-repo=http://negativo17.org/repos/fedora-spotify.repo
 dnf install -y quodlibet spotify-client vlc youtube-dl gnome-music
-dnf install -y gstreamer-plugins-base gstreamer1-plugins-base gstreamer-plugins-bad gstreamer-plugins-ugly gstreamer1-plugins-ugly gstreamer-plugins-good-extras gstreamer1-plugins-good gstreamer1-plugins-good-extras gstreamer1-plugins-bad-freeworld ffmpeg gstreamer-ffmpeg
+dnf install -y gstreamer-plugins-base gstreamer1-plugins-base gstreamer-plugins-bad gstreamer-plugins-ugly gstreamer1-plugins-ugly gstreamer-plugins-good-extras gstreamer1-plugins-good gstreamer1-plugins-good-extras gstreamer1-plugins-bad-freeworld ffmpeg gstreamer-ffmpeg gstreamer1-libav
 
-# Graphics & Themes
+# Customization, graphics & Themes
 dnf install -y gnome-tweak-tool
 dnf install -y numix\*
 dnf install -y gimp
@@ -49,7 +49,7 @@ dnf install -y icedtea-web java-openjdk
 
 # Communications
 dnf install -y pidgin pidgin-sipe pidgin-logviewer
-
+dnf install -y remmina-plugins-rdp remmina
 # Bittorrent download
 dnf install -y qbittorrent transmission
 # Screenshots
@@ -61,6 +61,8 @@ dnf install -y hddtemp udisks2
 dnf install -y mediawriter
 dnf install -y terminator clusterssh
 dnf install -y axel
+systemctl restart rsyslog
+systemctl enable  rsyslog
 # Network monitor
 dnf install -y iptraf nmap gnu-netcat 
 
