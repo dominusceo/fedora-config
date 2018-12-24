@@ -4,7 +4,7 @@
 #Install script for enhance fedora
 USUARIO=ricardo.carrillo
 dnf update --refresh
-dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm 
+dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 systemctl start sshd
 systemctl enable sshd
@@ -16,7 +16,7 @@ dnf install -y fedora-workstation-repositories
 dnf config-manager --set-enabled google-chrome
 dnf install -y google-chrome-stable
 
-### Adobe Repository 64-bit x86_64 ## - it is necessary? 
+### Adobe Repository 64-bit x86_64 ## - it is necessary?
 #https://www.if-not-true-then-false.com/2010/install-adobe-flash-player-10-on-fedora-centos-red-hat-rhel/
 #rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
 #rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux
@@ -31,8 +31,6 @@ dnf install -y http://download.virtualbox.org/virtualbox/rpm/fedora/26/x86_64/Vi
 /usr/lib/virtualbox/vboxdrv.sh setup
 usermod -a -G vboxusers $USUARIO
 
-#Flathub repositories
-#https://dl.flathub.org/repo/flathub.flatpakrepo
 
 #music players,codecs & video
 dnf config-manager --add-repo=http://negativo17.org/repos/fedora-spotify.repo
@@ -64,7 +62,7 @@ dnf install -y axel
 systemctl restart rsyslog
 systemctl enable  rsyslog
 # Network monitor
-dnf install -y iptraf nmap gnu-netcat 
+dnf install -y iptraf nmap gnu-netcat
 
 #Performance and monitoring
 dnf install -y sysstat psacct htop glances
@@ -85,7 +83,7 @@ dnf install -y keepass
 dnf install -y unzip p7zip
 
 #software control version
-dnf install -y git 
+dnf install -y git
 
 # Virtualization
 dnf group -y install --with-optional virtualization
@@ -111,32 +109,37 @@ systemctl enable libvirtd
 
 #Activar extensiones gnome-extensions
 #descargar extensiones para navegador (firefox gnome-extensions)
+dnf install -y chrome-gnome-shell
 #Extensiones recomendadas
+#Dash to Dock ok
+#System Monitor ok
+#Appfolders Management extensions ok
+#User Themes ok
+#Media Player Indicator ok
+#Refresh Wifi-Connections ok
+#Screenshot Tool
 #fenor
-#Dash to Dock 
-#System Monitor
 #Hide top bar
-#Appfolders Management extensions
 #Apt Update Indicator
 #OpenWeather gnome extensions
-#Refresh Wifi-Connections
-#User Themes 
 #EasyScreenCast
-#Screenshot Tool
 #Battery Percentage
-#Media Player Indicator 
-dnf install -y gnome-shell-extension-dash-to-dock.noarch 
-dnf install -y gnome-shell-extension-screenshot-window-sizer.noarch 
-dnf install -y gnome-shell-extension-refresh-wifi.noarch 
-dnf install -y gnome-shell-extension-pidgin.noarch  
-dnf install -y gnome-shell-extension-places-menu.noarch  
+dnf install -y gnome-shell-extension-dash-to-dock.noarch
+dnf install -y gnome-shell-extension-screenshot-window-sizer.noarch
+dnf install -y gnome-shell-extension-media-player-indicator.noarch
+dnf install -y gnome-shell-extension-refresh-wifi.noarch
+dnf install -y gnome-shell-extension-apps-menu.noarch
+dnf install -y gnome-shell-extension-user-theme.noarch
+dnf install -y gnome-shell-extension-pidgin.noarch
+dnf install -y gnome-shell-extension-places-menu.noarch
 dnf install -y gnome-shell-extension-remove-bluetooth-icon.noarch
-dnf install -y gnome-shell-extension-do-not-disturb-button.noarch
 dnf install -y gnome-shell-extension-panel-osd.noarch
-dnf install -y chrome-gnome-shell
+dnf install -y gnome-shell-extension-do-not-disturb-button.noarch
+dnf install -y gnome-shell-extension-system-monitor-applet.noarch
 
 
-#Investigar flathub
+#Investigar flathub|Flathub repositories
+#https://dl.flathub.org/repo/flathub.flatpakrepo
 # Herramienta como ccleaner - herramientas
 # Stacer
 #flatpak install flathub org.baedert.corebird
