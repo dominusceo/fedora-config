@@ -125,6 +125,14 @@ systemctl enable libvirtd
 #Screenshot Tool
 #Battery Percentage
 #Media Player Indicator 
+dnf install -y gnome-shell-extension-dash-to-dock.noarch 
+dnf install -y gnome-shell-extension-screenshot-window-sizer.noarch 
+dnf install -y gnome-shell-extension-refresh-wifi.noarch 
+dnf install -y gnome-shell-extension-pidgin.noarch  
+dnf install -y gnome-shell-extension-places-menu.noarch  
+dnf install -y gnome-shell-extension-remove-bluetooth-icon.noarch
+dnf install -y gnome-shell-extension-do-not-disturb-button.noarch
+dnf install -y gnome-shell-extension-panel-osd.noarch
 dnf install -y chrome-gnome-shell
 
 
