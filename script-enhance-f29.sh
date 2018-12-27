@@ -58,23 +58,24 @@ dnf install -y qbittorrent transmission
 dnf install -y flameshot shutter
 
 ## Utilities
-dnf install -y lshw rsyslog lsscsi screen
+dnf install -y lshw lsusb lsscsi
 dnf install -y hddtemp udisks2
 dnf install -y mediawriter etcher-electron
 dnf install -y terminator clusterssh
 dnf install -y axel
+dnf install -y rsyslog screen htop
 systemctl restart rsyslog
 systemctl enable  rsyslog
 # Network monitor
 dnf install -y iptraf nmap gnu-netcat
-
 #Performance and monitoring
-dnf install -y sysstat psacct htop glances
+dnf install -y sysstat psacct glances
 # Monitoreo de hardware (temperature fans,cpus and video cards)
 # para powertop para calibrar la bateria
 dnf install -y lm_sensors powertop
 systemctl start powertop.service
 systemctl enable powertop.service
+
 #Tuned is a dynamic adaptive system-tuning daemon that tunes system settings dynamically depending on usage
 #https://opensource.com/article/17/8/customize-linux
 #dnf install -y tuned-gtk.noarch  tuned.noarch  tuned-utils.noarch
