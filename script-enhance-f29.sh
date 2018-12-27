@@ -6,8 +6,12 @@ USUARIO=ricardo.carrillo
 dnf update --refresh
 dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+# Enable SSH Service
 systemctl start sshd
 systemctl enable sshd
+
+# Media Writer images called etcher-electron
+wget https://bintray.com/resin-io/redhat/rpm -O /etc/yum.repos.d/bintray-resin-io-redhat.repo
 
 
 ### Install chrome
@@ -34,7 +38,7 @@ usermod -a -G vboxusers $USUARIO
 
 #music players,codecs & video
 dnf config-manager --add-repo=http://negativo17.org/repos/fedora-spotify.repo
-dnf install -y quodlibet spotify-client vlc youtube-dl gnome-music
+dnf install -y quodlibet spotify-client vlc youtube-dl gnome-music smplayer smplayer-themes smtube soundconverter
 dnf install -y gstreamer-plugins-base gstreamer1-plugins-base gstreamer-plugins-bad gstreamer-plugins-ugly gstreamer1-plugins-ugly gstreamer-plugins-good-extras gstreamer1-plugins-good gstreamer1-plugins-good-extras gstreamer1-plugins-bad-freeworld ffmpeg gstreamer-ffmpeg gstreamer1-libav
 
 # Customization, graphics & Themes
@@ -56,7 +60,7 @@ dnf install -y flameshot shutter
 ## Utilities
 dnf install -y lshw rsyslog lsscsi screen
 dnf install -y hddtemp udisks2
-dnf install -y mediawriter
+dnf install -y mediawriter etcher-electron
 dnf install -y terminator clusterssh
 dnf install -y axel
 systemctl restart rsyslog
