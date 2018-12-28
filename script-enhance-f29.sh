@@ -87,6 +87,10 @@ dnf install -y keepass
 #Compression
 dnf install -y unzip p7zip
 
+# Windows packages for read NTFS partitions
+
+dnf install -y exfat-utils fuse-exfat
+
 #software control version
 dnf install -y git
 
