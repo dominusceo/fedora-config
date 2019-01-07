@@ -166,6 +166,13 @@ dnf install -y gnome-shell-extension-remove-bluetooth-icon.noarch
 dnf install -y gnome-shell-extension-panel-osd.noarch
 dnf install -y gnome-shell-extension-do-not-disturb-button.noarch
 dnf install -y gnome-shell-extension-system-monitor-applet.noarch
+dnf install -y gnome-shell-extension-pomodoro
+
+#WebCams and ScreenRecorders
+dnf install -y simplescreenrecorder guvcview
+
+#Install support for nfs and samba shares trought gnome-interface
+dnf install -y gvfs-nfs gvfs-fuse gvfs-smb
 
 #Investigar flathub|Flathub repositories
 #https://dl.flathub.org/repo/flathub.flatpakrepo
