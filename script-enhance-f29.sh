@@ -174,6 +174,9 @@ dnf install -y simplescreenrecorder guvcview
 #Install support for nfs and samba shares trought gnome-interface
 dnf install -y gvfs-nfs gvfs-fuse gvfs-smb
 
+#Install support for controlling digital cameras and images in raw format
+yum install -y entangle darktable-tools-noise darktable
+
 #Investigar flathub|Flathub repositories
 #https://dl.flathub.org/repo/flathub.flatpakrepo
 # Herramienta como ccleaner - herramientas
