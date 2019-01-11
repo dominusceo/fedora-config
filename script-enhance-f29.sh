@@ -182,6 +182,8 @@ yum install -y entangle darktable-tools-noise darktable
 # Herramienta como ccleaner - herramientas
 # Stacer
 #flatpak install flathub org.baedert.corebird
+# Installing program for installer images for raspberry plataforms
+dnf install -y arm-image-installer
 
 # Red Hat and Ubuntu Fonts
 wget -c https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf -P /usr/share/fonts/PowerlineSymbols.otf
