@@ -57,6 +57,7 @@ repo_gpgcheck=1
 gpgkey=https://packagecloud.io/AtomEditor/atom/gpgkey
 __EOF__
 
+dnf install -y atom
 
 # Install Java plugins
 dnf install -y icedtea-web java-openjdk
