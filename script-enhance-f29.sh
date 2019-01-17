@@ -45,6 +45,19 @@ dnf install -y gnome-tweak-tool
 dnf install -y numix\*
 dnf install -y gimp
 
+# Installing editor Atmon
+rpm --import https://packagecloud.io/AtomEditor/atom/gpgkey
+cat << __EOF__ >> /etc/yum.repos.d/atom.repo
+[Atom]
+name=Atom Editor
+baseurl=https://packagecloud.io/AtomEditor/atom/el/7/\$basearch
+enabled=1
+gpgcheck=0
+repo_gpgcheck=1
+gpgkey=https://packagecloud.io/AtomEditor/atom/gpgkey
+__EOF__
+
+
 # Install Java plugins
 dnf install -y icedtea-web java-openjdk
 
