@@ -183,7 +183,11 @@ yum install -y entangle darktable-tools-noise darktable
 # Stacer
 #flatpak install flathub org.baedert.corebird
 # Installing program for installer images for raspberry plataforms
+# https://fedoramagazine.org/fedora-28-on-raspberry-pi-3b-plus/
 dnf install -y arm-image-installer
+
+# Installing ftp clients
+dnf install -y ftp lftp ncftp
 
 # Red Hat and Ubuntu Fonts
 wget -c https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf -P /usr/share/fonts/PowerlineSymbols.otf
