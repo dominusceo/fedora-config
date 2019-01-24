@@ -211,3 +211,5 @@ cd Overpass && cp -rvap desktop-fonts/overpass* /usr/share/fonts/
 cd /tmp && git clone https://github.com/dominusceo/linux-fonts.git
 cd linux-fonts && cd Ubuntu cp -vap Ubuntu-*ttf /usr/share/fonts/
 fc-cache -v -f /usr/share/fonts/
+# Installin expect package to execute unattended and interactive tasks
+dnf install -y expect.x86_64
