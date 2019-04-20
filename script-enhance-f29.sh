@@ -213,3 +213,6 @@ cd linux-fonts && cd Ubuntu cp -vap Ubuntu-*ttf /usr/share/fonts/
 fc-cache -v -f /usr/share/fonts/
 # Installin expect package to execute unattended and interactive tasks
 dnf install -y expect.x86_64
+
+# Install fetch information from system
+dnf install -y neofetch
